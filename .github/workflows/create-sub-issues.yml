@@ -1,0 +1,25 @@
+name: create-sub-issues
+on:
+  issues:
+    types:
+      - labeled
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        required: true
+jobs:
+  create-sub-issues:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            console.log(context);
+            console.log(process.env);
+        env:
+          ISSUE_NUMBER: 1
+          PROJECT_NUMBER: 1
