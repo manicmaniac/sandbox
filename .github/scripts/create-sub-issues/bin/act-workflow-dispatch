@@ -1,0 +1,8 @@
+#!/bin/sh
+
+act workflow_dispatch \
+    --job create-sub-issues \
+    --actor manicmaniac \
+    --container-architecture linux/amd64 \
+    --secret GITHUB_TOKEN="$GITHUB_TOKEN" \
+    --input issue_number=1
