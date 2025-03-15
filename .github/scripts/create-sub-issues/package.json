@@ -1,0 +1,10 @@
+{
+  "name": "sandbox",
+  "scripts": {
+    "test": "node --test"
+  },
+  "private": true,
+  "devDependencies": {
+    "@actions/github": "^6.0.0"
+  }
+}
